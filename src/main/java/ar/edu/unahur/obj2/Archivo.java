@@ -5,7 +5,7 @@ public class Archivo implements IElemento {
 	private String extension;
 	private Integer tamanio;
 	
-	public Archivo(String nombre, String extension, Integer tamanio) {
+	public Archivo(String nombre, Integer tamanio, String extension) {
 		this.nombre = nombre;
 		this.extension = extension;
 		this.tamanio = tamanio;
@@ -23,7 +23,7 @@ public class Archivo implements IElemento {
 
 	@Override
 	public void mostrar(Integer identacion) {
-		
+		System.out.println(" ".repeat(identacion) + "├ " + this.nombre());
 	}
 
 	@Override

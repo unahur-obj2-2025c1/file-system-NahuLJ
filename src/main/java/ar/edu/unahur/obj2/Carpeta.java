@@ -24,7 +24,8 @@ public class Carpeta implements IElemento{
 
 	@Override
 	public void mostrar(Integer identacion) {
-		
+		System.out.println(" ".repeat(identacion) + "└ " + nombre + " (" + this.tamanio() + "-Bytes)");
+		archivos.stream().forEach(a -> a.mostrar(identacion + 3));
 	}
 
 	@Override
